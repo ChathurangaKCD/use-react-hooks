@@ -1,15 +1,22 @@
 .App {
+  background-color: #282c34;
+  min-height: 100vh;
   text-align: center;
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
+  animation: App-logo-spin infinite 1s linear;
   height: 40vmin;
+}
+.App-logo.reverse {
+  animation-name: App-logo-spin-reverse;
+}
+.App-logo.paused {
+  animation-play-state: paused;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  min-height: 95vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -28,5 +35,14 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes App-logo-spin-reverse {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
   }
 }
